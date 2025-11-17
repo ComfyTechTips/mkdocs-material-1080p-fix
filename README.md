@@ -1,3 +1,56 @@
+## MkDocs 1080p Fix Theme
+
+This project uses my custom [mkdocs-material theme][fix-repo] fork.
+
+It changes a few lines to fix the rendering of pages around ~50% of a 1080p display.
+
+If you would like to use my theme, add it as a submodule to your project:
+
+```bash
+git submodule add https://github.com/ComfyTechTips/mkdocs-material-1080p-fix.git theme/mkdocs-material
+```
+
+Next, change the `requirements.txt` in your project:
+
+```bash
+# mkdocs-material # <-- Comment Out
+-e ./theme/mkdocs-material-1080p-fix # <-- Add
+...
+```
+
+Last, you'll likely need to uninstall the previous version and install this version:
+
+```bash
+pip uninstall mkdocs-material
+pip install -r requirements.txt
+```
+
+From there you may serve as normal:
+
+```bash
+mkdocs serve --livereload
+```
+
+## Changes & Dev Notes
+
+Seems to work fine in Python 3.13 & Python 3.14
+
+Seems to build fine using Node v25.2.0 & npm 11.6.2.
+
+```bash
+python -m venv venv
+./venv/Scripts/activate
+pip install -e .
+npm install
+npm run build
+```
+
+## Copyright
+
+Although I don't believe my work is transformative enough, I have appended an MIT license covering my changes for the certainty of others.
+
+# Original Project Info:
+
 <p align="center">
   <a href="https://squidfunk.github.io/mkdocs-material/">
     <img src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/logo.svg" width="320" alt="Material for MkDocs">
@@ -347,6 +400,26 @@ For detailed installation instructions, configuration options, and a demo, visit
 **MIT License**
 
 Copyright (c) 2016-2025 Martin Donath
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+
+Copyright (c) 2025 ComfyTechTips
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to
