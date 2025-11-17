@@ -1,8 +1,8 @@
 ## MkDocs 1080p Fix Theme
 
-This project uses my custom [mkdocs-material theme][fix-repo] fork.
+This project changes a few lines to fix the page breakpoints so a 50% sized 1080p display can better see the site.
 
-It changes a few lines to fix the rendering of pages around ~50% of a 1080p display.
+## Using
 
 If you would like to use my theme, add it as a submodule to your project:
 
